@@ -61,22 +61,22 @@ implements EmphasisDialog.emphasisDialogListener, ResultsDialog.resultsDialogLis
     @Override
     public void onSelection(ArrayList arrayList) {
         String displayString = userText.getText().toString();
-// figure out if this issue is the if statement or the string modifiers EDIT: its the if astatement
-//        if (arrayList.size() != 0){
-//            //the integer for the uppercase option
-//            for (int i = 0; i < arrayList.size(); i++) {
-//                if (arrayList.get(i) == "0") {
+
+        if (arrayList.size() != 0){
+            //the integer for the uppercase option
+
+              if (arrayList.contains(0) ){
                     displayString = displayString.toUpperCase();
-//                }
-//                //the integer for the ! option
-//                if (arrayList.get(i) == "1") {
-//                    displayString = displayString + "!!!!";
-//                }
-//                //the integer for the :) option
-//                if (arrayList.get(i) == "2") {
-//                    displayString = displayString + " :)";
-//                }
-//            }
+                }
+                //the integer for the ! option
+                if (arrayList.contains(1)) {
+                    displayString = displayString + "!!!!";
+                }
+                //the integer for the :) option
+                if (arrayList.contains(2)) {
+                    displayString = displayString + " :)";
+                }
+            }
 
             ResultsDialog dialog = new ResultsDialog();
             Bundle dialogArgs = new Bundle();
@@ -88,7 +88,7 @@ implements EmphasisDialog.emphasisDialogListener, ResultsDialog.resultsDialogLis
 
 
 
-    //}
+
 
     @Override
     public void userClickedOK() {
